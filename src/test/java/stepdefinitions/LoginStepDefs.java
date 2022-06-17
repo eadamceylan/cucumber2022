@@ -1,4 +1,3 @@
-
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
@@ -14,30 +13,38 @@ import utilities.Driver;
 public class LoginStepDefs {
 
     HomePage homePage = new HomePage();
-    LoginPage loginPage =new LoginPage();
+    LoginPage loginPage = new LoginPage();
     DefaultPage defaultPage = new DefaultPage();
+
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
     }
+
+
     @Given("user login dropdown")
     public void user_login_dropdown() {
         homePage.homeLoginButton.click();
     }
+
     @Given("user sends username {string}")
     public void user_sends_username(String string) {
-        loginPage.loginButton.sendKeys(string);
+        loginPage.username.sendKeys(string);
+
     }
+
     @Given("user sends password {string}")
     public void user_sends_password(String string) {
         loginPage.password.sendKeys(string);
     }
+
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
         loginPage.loginButton.click();
     }
-    @Then("verify the login successful")
-    public void verify_the_login_successful() {
+
+    @Then("verify the login is successful")
+    public void verify_the_login_is_successful() {
         Assert.assertTrue(defaultPage.userID.isDisplayed());
 
     }

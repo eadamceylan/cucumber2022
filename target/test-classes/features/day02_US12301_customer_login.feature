@@ -7,13 +7,11 @@ Feature: customer_login
     And user sends username "<username>"
     And user sends password "<password>"
     When user clicks on login button
-    Then verify the login successful
+    Then verify the login is successful
     Then close the application
-
-    Examples:
+    Examples: customer credentials
       | username                     | password |
       | customer@bluerentalcars.com  | 12345    |
       | customer1@bluerentalcars.com | 12346    |
       | customer2@bluerentalcars.com | 12347    |
       | customer3@bluerentalcars.com | 12348    |
-
