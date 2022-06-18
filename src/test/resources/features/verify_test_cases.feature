@@ -1,4 +1,4 @@
-@Testautomation
+@automation_exercise
 Feature: Verify Test Cases
   Background:
     Given user launches the browser

@@ -3,7 +3,7 @@
 #Gherkin language is used in a feature file
 #All feature files must start with Feature keyword
 #Each feature file can ONLY have 1 Feature keyword
-  @google_search
+@google_search
 Feature: First Feature File
 #  Scenario = Test Case = Test Scenario
 #  Each scenario has Gherkin keyword : Given, And, When, Then, But, *
@@ -22,17 +22,19 @@ Feature: First Feature File
     Then verify the page title contains iPhone
     And close the application
 
-    @teapot_search
+  @teapot_search
   Scenario: TC02_Teapot_Search
     When user search for TeaPot on google
     Then verify the page title contains TeaPot
     And close the application
-    @smoke_test
+
+   @smoke_test
   Scenario: TC03_Flower_Search
     When user search for Flower on google
     Then verify the page title contains Flower
     And close the application
-    @smoke_test
+
+   @smoke_test
   Scenario: TC04_BMW_Search
     When user search for BMW on google
     Then verify the page title contains BMW
@@ -45,3 +47,8 @@ Feature: First Feature File
 #  Because tests are run from TOP to BUTTOM in the feature file
 #  3. Does order of step definitions on step definitions folder matters? NO
 #  Because the tests run based of the steps NOT BASED ON THE STEP DEFINITIONS
+
+
+
+
+

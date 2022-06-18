@@ -1,43 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="17.522">
-<testcase classname="customer_login" name="login_customer_profile_testing" time="5.334">
-<system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user sends username "customer@bluerentalcars.com".......................passed
-And user sends password "12345".............................................passed
-When user clicks on login button............................................passed
-Then verify the login is successful.........................................passed
-Then close the application..................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="10.067">
+<testcase classname="Verify Test Cases" name="TC_07_Test_Cases" time="5.629">
+<system-out><![CDATA[Given user launches the browser.............................................passed
+When user navigates to URL..................................................passed
+Then user verifies that home page is visible successfully...................passed
+And user clicks on Test Cases button........................................passed
+Then user is navigated to test cases page successfully......................passed
+Then user closes the browser................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="customer_login" name="login_customer_profile_testing_2" time="4.028">
-<system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user sends username "customer1@bluerentalcars.com"......................passed
-And user sends password "12346".............................................passed
-When user clicks on login button............................................passed
-Then verify the login is successful.........................................passed
-Then close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="customer_login" name="login_customer_profile_testing_3" time="3.913">
-<system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user sends username "customer2@bluerentalcars.com"......................passed
-And user sends password "12347".............................................passed
-When user clicks on login button............................................passed
-Then verify the login is successful.........................................passed
-Then close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="customer_login" name="login_customer_profile_testing_4" time="3.997">
-<system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user sends username "customer3@bluerentalcars.com"......................passed
-And user sends password "12348".............................................passed
-When user clicks on login button............................................passed
-Then verify the login is successful.........................................passed
-Then close the application..................................................passed
+<testcase classname="Verify Test Cases" name="TC_22_Add_Cart" time="4.281">
+<system-out><![CDATA[Given user launches the browser.............................................passed
+When user navigates to URL..................................................passed
+Then user scrolls to bottom of the page.....................................passed
+And user verifies RECOMMENDED ITEMS are visible.............................passed
+And user clicks on Add To Cart button on Recommended product................passed
+And user clicks on View Cart button.........................................passed
+And user verifies that product is displayed in the cart page................passed
 ]]></system-out>
 </testcase>
 </testsuite>

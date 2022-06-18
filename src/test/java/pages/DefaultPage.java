@@ -7,17 +7,14 @@ import utilities.Driver;
 
 public class DefaultPage {
 
-    //    After logged in
     public DefaultPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(xpath = "//button[@id='dropdown-basic-button']")
     public WebElement userID;
-
     @FindBy(linkText = "Logout")
     public WebElement logOut;
-
     @FindBy(xpath = "//button[text()='OK']")
     public WebElement OK;
 }

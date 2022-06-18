@@ -6,8 +6,10 @@ Feature: admin_login
     Given user is on the login page
     And user login dropdown
     And user enters admin_username and admin_password
-      | admin_id                 | admin_pass |
-      | admin@bluerentalcars.com | 12345      |
+      | admin_id                     | admin_pass |
+      | admin@bluerentalcars.com     | 12345      |
+      | customer2@bluerentalcars.com | 12347      |
+      | customer3@bluerentalcars.com | 12348      |
     When user clicks on login button
     Then verify the login is successful
     Then close the application

@@ -1,4 +1,5 @@
 package stepdefinitions;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,7 +8,9 @@ import org.openqa.selenium.Keys;
 import pages.GooglePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+
 public class GoogleStepDefs {
+
     GooglePage googlePage = new GooglePage();
     @Given("user is on the google page")
     public void user_is_on_the_google_page() {
@@ -16,8 +19,9 @@ public class GoogleStepDefs {
         try{
             googlePage.popUpOkButton.click();
         }catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
         }
+
     }
     @When("user search for iPhone on google")
     public void user_search_for_i_phone_on_google() {
@@ -40,6 +44,7 @@ public class GoogleStepDefs {
     public void verify_the_page_title_contains_tea_pot() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("TeaPot"));
     }
+
     @When("user search for Flower on google")
     public void user_search_for_flower_on_google() {
         googlePage.searchBox.sendKeys("Flower"+Keys.ENTER);
@@ -48,6 +53,7 @@ public class GoogleStepDefs {
     public void verify_the_page_title_contains_flower() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Flower"));
     }
+
     @When("user search for BMW on google")
     public void user_search_for_bmw_on_google() {
         googlePage.searchBox.sendKeys("BMW"+Keys.ENTER);
@@ -56,4 +62,6 @@ public class GoogleStepDefs {
     public void verify_the_page_title_contains_bmw() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("BMW"));
     }
+
+
 }
