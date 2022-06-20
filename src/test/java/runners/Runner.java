@@ -14,11 +14,11 @@ import org.junit.runner.RunWith;
                 "html:target/default_cucumber_report.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+//                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         },
         features = "./src/test/resources/features",//path od features folder
         glue = {"stepdefinitions","hooks"},//path of the step definitions folder
-        tags = "@automation_exercise",
+        tags = "@reserve_car",
         dryRun = false
 )
 public class Runner {
