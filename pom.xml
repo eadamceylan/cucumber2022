@@ -42,12 +42,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;-->
-        <dependency>
-            <groupId>tech.grasshopper</groupId>
-            <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.6.0</version>
-        </dependency>
+<!--        &lt;!&ndash;        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>tech.grasshopper</groupId>-->
+<!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+<!--            <version>1.6.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.apache.poi</groupId>

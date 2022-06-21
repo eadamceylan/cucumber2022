@@ -1,4 +1,4 @@
-@parameterization1
+@parameterization1 @regression
 Feature: US12300_parameterizing_feature_file_google_search
 
   Background: user_is_on_the_google_home_page

@@ -1,26 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.578">
-<testcase classname="reserve_car" name="reserve_car_as_customer" time="7.385">
-<system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user sends username "customer@bluerentalcars.com".......................passed
-And user sends password "12345".............................................passed
-When user clicks on login button............................................passed
-And user selects a "Ford Fiesta"............................................passed
-And user enters pick up place "New York"....................................passed
-And user enters drop off place "New York"...................................passed
-And user enters pick up date "08/08/2023"...................................passed
-And user enters pick up time "01:00PM"......................................passed
-And user enters drop off date "10/10/2023"..................................passed
-And user enters drop off time "08:00AM".....................................passed
-Then user clicks on continue reservation....................................passed
-Then verify complete reservation screen pop up..............................passed
-And user enters card number "1234123412341234"..............................passed
-And user enters "Ali Can" on the card.......................................passed
-And user enters "12/25" and "555"...........................................passed
-And user checks the agreement...............................................passed
-And user clicks complete reservation........................................passed
-Then verify Reservation created successfully pop up.........................passed
-]]></system-out>
-</testcase>
-</testsuite>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.275"/>

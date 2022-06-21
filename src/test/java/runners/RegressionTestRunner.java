@@ -1,5 +1,6 @@
 package runners;
 
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -18,16 +19,9 @@ import org.junit.runner.RunWith;
 //                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         },
         features = "./src/test/resources/features",//path od features folder
-        glue = {"stepdefinitions","hooks"},//path of the step definitions folder
-        tags = "@google_search",
+        glue = {"stepdefinitions"},//path of the step definitions folder
+        tags = "@@regression",
         dryRun = false
 )
-public class Runner {
+public class RegressionTestRunner {
 }
-/*
-Runner class is used to run the feature files
-@RunWith : makes this class runnable
-@CucumberOptions :
-    1. features : path of the features folder
-    2. glue : path of the step definitions folder
- */
