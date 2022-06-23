@@ -1,18 +1,23 @@
 JDBC:
-1. Our database is PostGreSQL so add its dependency
-
+1. Our database is PostGreSQL so add postgresql dependency
 <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
     <version>42.4.0</version>
 </dependency>
-
-2. Create DBUtil class Add JDBC util class
-
+2. In Utilities, Create DBUtils class and Add JDBC Util Class in there
 3. Create a folder: database_testing. And create a FF: jdbc_read.feature
+4. Write the feature file to read database data
+    Given user connects to the database// Connect to the database
+    And user gets the "*" from "tp_customer" table // go to customer table
+    And user reads all of the "ssn" column data //read the ssn of customers
 
-4. Write the feature file to read DB data
-
-
-5. Create step defs:
+    We are using parameters "" whenever we are giving column or table data
+    We do this so that we can use the same step for testing other columns or tables
+ 5. Create step definitions:
+    DBUtils.createConnection();              ===>>> To connect to the database using DBUtils class
+    DBUtils.executeQuery(query);             ===>>> To execute the SQL query to go to a table using DBUtils class
+    DBUtils.getResultset().next();           ===>>> To go to the next row using DBUtils class
+    DBUtils.getResultset().getObject(string);===>>> accepts columns name and returns the value
+    DBUtils.closeConnection();               ===>>> closes the database connection

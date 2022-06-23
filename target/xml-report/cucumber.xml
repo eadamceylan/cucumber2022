@@ -1,10 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.396">
-<testcase classname="database_read_feature" name="TC_read_customer_ssn_information" time="1.209">
-<system-out><![CDATA[Given user connects to the database.........................................passed
-And user gets the "*" from "tp_customer" table..............................passed
-And user reads all of the "ssn" column data.................................passed
-Then close the database connection..........................................passed
-]]></system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.627">
+<testcase classname="US_8_user should be able to reserve a car" name="US_8_reserve_car_as_a_customer" time="16.44">
+<failure message="element click intercepted: Element is not clickable at point (759, 3023)&#10;  (Session info: chrome=102.0.5005.115)&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: 'DESKTOP-COS9NIQ', ip: '192.168.2.34', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [79ce212d46e5cea6b30fe563d94c1b9e, clickElement {id=8a9bbeaf-1320-4fff-a304-734a16215af4}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50425/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (79ce212d46e5cea6b30fe563d94c1b9e)] -&gt; xpath: //table[@class='table table-striped table-bordered table-hover']/tbody/tr[last()]]&#10;Session ID: 79ce212d46e5cea6b30fe563d94c1b9e" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user is on the login page.............................................passed
+And user login dropdown.....................................................passed
+And user sends username "customer@bluerentalcars.com".......................passed
+And user sends password "12345".............................................passed
+When user clicks on login button............................................passed
+And user select a car "Ford Fiesta".........................................passed
+And user enters pickup place "London".......................................passed
+And user enters dropoff place "London"......................................passed
+And user enters pickup date "01.02.2021"....................................passed
+And user enters pickup time "14:00".........................................passed
+And user enters dropoff date "01.03.2021"...................................passed
+And user enters dropoff time "14:00"........................................passed
+And click continue reservation..............................................passed
+And verify complete reservation screen pops up..............................passed
+And enter credit card "1234123412341234"....................................passed
+And enter credit card name on card "AAAA"...................................passed
+And enter expire date "0523" and cvc "123"..................................passed
+And checks the aggreement...................................................passed
+And click complete reservation..............................................passed
+And verify Reservation created successfully pop up..........................passed
+And navigated to Reservations screen........................................passed
+And verify the last reservation is created..................................passed
+When you click on the last reservation......................................failed
+Then verify that reservation detail page is displayed.......................skipped
+And verify the table has the following fields:Model, Doors, Seats, Luggage, Transmission, Air Conditioning, Fuel Type, Age.skipped
+And click on back to reservations...........................................skipped
+And verify Reservations page is displayed...................................skipped
+And click on Home link......................................................skipped
+Then verify the home page is displayed......................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (759, 3023)
+  (Session info: chrome=102.0.5005.115)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-COS9NIQ', ip: '192.168.2.34', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [79ce212d46e5cea6b30fe563d94c1b9e, clickElement {id=8a9bbeaf-1320-4fff-a304-734a16215af4}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50425/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (79ce212d46e5cea6b30fe563d94c1b9e)] -> xpath: //table[@class='table table-striped table-bordered table-hover']/tbody/tr[last()]]
+Session ID: 79ce212d46e5cea6b30fe563d94c1b9e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy21.click(Unknown Source)
+	at stepdefinitions.US08ReserveCarStepDefs.you_click_on_the_last_reservation(US08ReserveCarStepDefs.java:52)
+	at ✽.you click on the last reservation(file:///C:/Users/admin/IdeaProjects/cucumber-my-selelenium-project-main/./src/test/resources/features/US_08_reserve_a_car.feature:29)
+]]></failure>
 </testcase>
 </testsuite>

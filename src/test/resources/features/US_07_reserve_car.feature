@@ -26,5 +26,5 @@ Feature: reserve_car
     Then user closes application
 
     Examples:
-      | username                    | password | car  | pick_place | drop_place | pick_date  | pick_time | drop_date  | drop_time | card_number      | name    | expire_date | CVC |
-      | customer@bluerentalcars.com | 12345    | Ford Fiesta | New York   | New York   | 08/08/2023 | 01:00PM   | 10/10/2023 | 08:00AM   | 1234123412341234 | Ali Can | 12/25       | 555 |
+      | username                    | password | car         | pick_place | drop_place | pick_date  | pick_time | drop_date  | drop_time | card_number      | name    | expire_date | CVC |
+      | customer@bluerentalcars.com | 12345    | Ford Fiesta | Toronto    | Toronto    | 08/08/2024 | 01:00PM   | 10/10/2024 | 08:00AM   | 1234123412341234 | Ali Can | 12/25       | 555 |
