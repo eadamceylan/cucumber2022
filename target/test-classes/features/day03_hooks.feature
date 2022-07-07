@@ -7,6 +7,7 @@ Feature: customer_login
     And user sends username "<username>"
     And user sends password "<password>"
     When user clicks on login button
+#    WE MADE BELOW LINE FAIL ON PURPOSE. FOR HOOKS PRACTICE TO GE TO SCREENSHOTS ATTACHED TO REPORT
     And test case fails
     Then close the application
 

@@ -1,6 +1,5 @@
 package runners;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -15,12 +14,11 @@ import org.junit.runner.RunWith;
                 "html:target/default_cucumber_report.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failedRerun.txt"
-//                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "rerun:target/failedRerun.txt",
         },
         features = "./src/test/resources/features",//path od features folder
-        glue = {"stepdefinitions","hooks"},//path of the step definitions folder
-        tags = "@customer_login",
+        glue = {"stepdefinitions"},//path of the step definitions folder
+        tags = "@test3",
         dryRun = false
 )
 public class TestRunner {

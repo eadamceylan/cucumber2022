@@ -1,7 +1,5 @@
 package runners;
 
-
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -9,7 +7,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        // The pupose of this class is :rerun only failed scenarios
+        //The purpose of this class is:
+//        RERUN ONLY TXT FILE THAT HAS FAILED SCENARIOS
 
         plugin = {
                 "pretty",
@@ -19,11 +18,10 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         },
-        features = "@target\\failedRerun.txt",//path od features folder
+        features = "@target/failedRerun.txt",//path od features folder
         glue = {"stepdefinitions","hooks"},//path of the step definitions folder
         dryRun = false
 )
+
 public class FailedScenarioRunner {
-
-
 }

@@ -13,13 +13,4 @@ public class HomePage {
     @FindBy(partialLinkText = "Login")
     public WebElement homeLoginButton;
 
-    @FindBy(xpath = "//*[@id='dropdown-basic-button']")
-    public WebElement userNameDropDown;
-
-    @FindBy(xpath = "(//*[@class='dropdown-item'])[1]")
-    public WebElement homePageReservationsDropDown;
-
-
-
-
 }

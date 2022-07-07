@@ -42,7 +42,7 @@
             <scope>test</scope>
         </dependency>
 
-<!--        &lt;!&ndash;        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;&ndash;&gt;-->
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;-->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
@@ -73,7 +73,7 @@
 
     </dependencies>
 
-    <!--    Paste plugins after dependencies tag-->
+<!--    Paste plugins after dependencies tag-->
     <build>
         <plugins>
             <plugin>

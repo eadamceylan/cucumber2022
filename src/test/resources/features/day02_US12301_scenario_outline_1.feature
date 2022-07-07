@@ -1,4 +1,4 @@
-@scenario_outline_1
+@scenario_outline_1 @test1
 Feature: day02_US12300_scenario_outline_1.feature
 
   Background: opening_google_page

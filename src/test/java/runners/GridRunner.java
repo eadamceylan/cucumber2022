@@ -7,8 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        //
-
+        monochrome = true,
         plugin = {
                 "pretty",
                 "html:target/default_cucumber_report.html",
@@ -18,8 +17,8 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources/features",//path od features folder
         glue = {"stepdefinitions"},//path of the step definitions folder
-        tags = "@test2",
+        tags = "@grid_feature",
         dryRun = false
 )
-public class SmokeTestRunner {
+public class GridRunner {
 }

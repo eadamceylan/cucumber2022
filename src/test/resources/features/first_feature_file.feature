@@ -3,7 +3,7 @@
 #Gherkin language is used in a feature file
 #All feature files must start with Feature keyword
 #Each feature file can ONLY have 1 Feature keyword
-@google_search
+@google_search @test3
 Feature: First Feature File
 #  Scenario = Test Case = Test Scenario
 #  Each scenario has Gherkin keyword : Given, And, When, Then, But, *

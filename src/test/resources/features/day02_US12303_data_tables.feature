@@ -1,4 +1,4 @@
-@admin_login
+@admin_login @test2
 Feature: admin_login
   Scenario: login_with_admin_profile
 #Do i have reusable step definition??? Yes

@@ -1,0 +1,104 @@
+INSTALLATION:
+LINK: https://www.selenium.dev/documentation/grid/getting_started/
+
+1. Create a folder in the Desktop : SeleniumServer
+
+2. -Download Selenium Server : https://www.selenium.dev/downloads/
+   -Download chrome driver : https://chromedriver.chromium.org/downloads
+   -Download firefox driver : https://github.com/mozilla/geckodriver/releases
+
+Move all of them to the SeleniumServer folder and Unzip.
+
+3. Open your Terminal or CMD and change directory to the SeleniumServer folder
+Mac: Terminal
+Windows : CMD
+Mac     :  ls: list of folders
+Windows : dir: list of folder
+
+4. Run the server
+java -jar selenium-server-4.3.0.jar standalone
+http://192.168.0.14:4444/ui# link now show the grid
+
+
+5. Create feature file : grid.feature
+@grid_feature
+Feature: grid_feature
+  @grid_chrome
+  Scenario: TC01_running_on_chrome
+    Given user is on the application_URL with chrome
+    And verify the title of the page is "Blue Rental Cars | Cheap, Hygienic, VIP Car Hire"
+    Then close the remote driver
+
+6. Create GridRunner
+
+package runners;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        monochrome = true,
+        plugin = {
+                "pretty",
+                "html:target/default_cucumber_report.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt",
+        },
+        features = "./src/test/resources/features",//path od features folder
+        glue = {"stepdefinitions"},//path of the step definitions folder
+        tags = "@grid_feature",
+        dryRun = true
+)
+public class GridRunner {
+}
+
+7. GridStepDefs
+package stepdefinitions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+
+public class GridStepDefs {
+    @Given("user is on the application_URL with chrome")
+    public void user_is_on_the_application_url_with_chrome() {
+
+    }
+    @Given("verify the title of the page is {string}")
+    public void verify_the_title_of_the_page_is(String string) {
+
+    }
+    @Then("close the remote driver")
+    public void close_the_remote_driver() {
+
+    }
+}
+
+8. Write the JAVA Code in the step definitions
+
+*****DONE with running test cases on Chrome using selenium grid
+
+9. Run tests on Firefox
+WebDriver driver= new RemoteWebDriver(new URL("http://192.168.0.14:4444"),new FirefoxOptions());
+
+
+**********
+***What is Selenium Grid? ***When do you use selenium Grid?
+1. Selenium Grid is a tool to run tests
+    ***on Remote Web Driver
+    ***in parallel
+    ***for Cross-platform testing
+    ***Run on different Operating System
+
+***How do setup your selenium grid?
+1. Download the selenium server- currently using selenium grid version 4
+2. Download the drivers-currently using chromedriver and firefox driver
+3. Make sure we have the servee and drivers in the same folder
+4. Use terminal or CMD and run the server - currently we use standalone mode :
+java -jar selenium-server-4.3.0.jar standalone
+
+NOTE: We can run using Hubs and the Nodes :
+Create a HUB:  java -jar selenium-server-4.1.2.jar hub
+Create a NODE: java -jar selenium-server-4.1.2.jar node
+5.Create your feature file and step definition
+NOTE: We use RemoteWebDriver
